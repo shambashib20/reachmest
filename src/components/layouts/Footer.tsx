@@ -1,18 +1,30 @@
 import { FaLinkedinIn, FaFacebookF, FaXTwitter, FaInstagram } from 'react-icons/fa6'
 
 const services = [
-    'Mobile App Development', 'Software Product Development',
-    'Web App Development', 'Application Modernization', 'Software Consulting',
-    'Software Development', 'DevOps Services', 'IoT Services',
-    'Enterprise Software Development', 'eCommerce App Development',
+    'Digital Marketing Services',
+    'SEO Services',
+    'AI Marketing Services',
+    'Performance Marketing',
+    'Content Marketing',
+    'Social Media Management',
+    'AI Search Optimization',
+    'Conversion Rate Optimisation',
+    'White Label Marketing',
+    'Web Development',
+    'App Development',
 ]
 
-const hireDevs = [
-    'Hire React Native Developers', 'Hire Mobile App Developers',
-    'Hire Dedicated Developers', 'Hire Full-Stack Developers', 'Hire AI Developers',
-    'Hire React JS Developers', 'Hire Web Developers',
-    'Hire WordPress Developers', 'Hire Next JS Developers',
-    'Hire Healthcare Software Developers',
+const hireExperts = [
+    'Hire SEO Specialists',
+    'Hire PPC & Paid Media Experts',
+    'Hire Social Media Managers',
+    'Hire Content Strategists',
+    'Hire AI Marketing Specialists',
+    'Hire CRO Specialists',
+    'Hire Web Developers',
+    'Hire Full Stack Developers',
+    'Hire Mobile App Developers',
+    'Hire AI Automation Engineers',
 ]
 
 export default function Footer() {
@@ -26,15 +38,15 @@ export default function Footer() {
                 <div>
                     <a href="/" className="text-white font-bold text-[24px] inline-block mb-4">Reachmest</a>
                     <p className="text-[14px] leading-7 mb-6">
-                        Reachmest is a client centric and agile software development company specializing in a broad range of technology solutions, with expertise in Software Development, DevOps, Business Consulting, Cloud Computing, and Quality Assurance.
+                        Reachmest is an AI-powered digital marketing and software development agency helping businesses grow through strategy-led marketing, custom software solutions and intelligent automation.
                     </p>
                     <h4 className="text-white font-semibold text-[14px] mb-3">Follow Us</h4>
                     <div className="flex gap-3">
                         {[FaLinkedinIn, FaFacebookF, FaXTwitter, FaInstagram].map((Icon, i) => (
-    <a key={i} href="#" className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center hover:border-blue-500 hover:text-blue-500 transition-colors">
-        <Icon size={16} />
-    </a>
-))}
+                            <a key={i} href="#" className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center hover:border-blue-500 hover:text-blue-500 transition-colors">
+                                <Icon size={16} />
+                            </a>
+                        ))}
                     </div>
                 </div>
 
@@ -81,7 +93,7 @@ export default function Footer() {
                 <div>
                     <h4 className="text-white font-semibold text-[14px] mb-4">Services</h4>
                     <ul className="flex flex-col gap-2">
-                        {services.slice(0, 5).map((s, i) => (
+                        {services.slice(0, 6).map((s, i) => (
                             <li key={i}><a href="#" className="text-[13px] hover:text-white transition-colors">{s}</a></li>
                         ))}
                     </ul>
@@ -89,15 +101,15 @@ export default function Footer() {
                 <div>
                     <h4 className="text-white font-semibold text-[14px] mb-4 opacity-0">-</h4>
                     <ul className="flex flex-col gap-2">
-                        {services.slice(5).map((s, i) => (
+                        {services.slice(6).map((s, i) => (
                             <li key={i}><a href="#" className="text-[13px] hover:text-white transition-colors">{s}</a></li>
                         ))}
                     </ul>
                 </div>
                 <div>
-                    <h4 className="text-white font-semibold text-[14px] mb-4">Hire Devs</h4>
+                    <h4 className="text-white font-semibold text-[14px] mb-4">Hire Experts</h4>
                     <ul className="flex flex-col gap-2">
-                        {hireDevs.slice(0, 5).map((s, i) => (
+                        {hireExperts.slice(0, 5).map((s, i) => (
                             <li key={i}><a href="#" className="text-[13px] hover:text-white transition-colors">{s}</a></li>
                         ))}
                     </ul>
@@ -105,7 +117,7 @@ export default function Footer() {
                 <div>
                     <h4 className="text-white font-semibold text-[14px] mb-4 opacity-0">-</h4>
                     <ul className="flex flex-col gap-2">
-                        {hireDevs.slice(5).map((s, i) => (
+                        {hireExperts.slice(5).map((s, i) => (
                             <li key={i}><a href="#" className="text-[13px] hover:text-white transition-colors">{s}</a></li>
                         ))}
                     </ul>
@@ -114,7 +126,7 @@ export default function Footer() {
 
             {/* Bottom Bar */}
             <div className="px-10 py-5 flex items-center justify-between">
-                <p className="text-[13px]">© 2026 Reachmest. All rights reserved.</p>
+                <p className="text-[13px]">© 2026 Reachmest Technologies. All rights reserved.</p>
                 <div className="flex gap-6">
                     {['About Us', 'Privacy Policy', 'Terms & Conditions', 'Refund Policy', 'Sitemap'].map((link, i) => (
                         <a key={i} href="#" className="text-[13px] hover:text-white transition-colors">{link}</a>
