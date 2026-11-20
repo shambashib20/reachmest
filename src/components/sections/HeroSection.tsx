@@ -11,7 +11,7 @@ export default function HeroSection() {
         <>
         <section className="relative h-screen w-full overflow-hidden ">
             <HeroVideo />
-            <div className="absolute z-10 left-0 bottom-20 h-full w-full flex  bg-black/70 px-10 text-white items-end">
+            <div className="absolute z-10 left-0 bottom-20 h-full w-full flex   px-10 text-white items-end">
                 <div className='max-w-[590px] space-y-6'>
                         <h1 className="text-[50px] font-bold leading-16">Engineering the Next Generation of Digital Systems with AI</h1>
                     <p className='text-[16px] leading-7 text-left'>Reachmest engineers secure,scalable systems by combining architecture, data enegineering, and AI in partnership with OpenAI and Anthropic, helping organizations move from strategy to reliable systems in production.</p>
