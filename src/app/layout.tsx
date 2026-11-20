@@ -3,6 +3,7 @@ import { manrope, dmSans } from "@/lib/fonts"
 import "./globals.css"
 import Header from "@/components/layouts/Header"
 import Footer from "@/components/layouts/Footer"
+import LenisProvider from "@/providers/LenisProvider"
 
 export const metadata: Metadata = {
   title: "REACHMEST Technologies",
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
 
       <body suppressHydrationWarning className="min-h-full flex flex-col"> <Header />
+        <LenisProvider>
         {children}
+        </LenisProvider>
         <Footer />
       </body>
     </html>
