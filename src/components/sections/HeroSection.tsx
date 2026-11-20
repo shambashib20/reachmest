@@ -20,10 +20,11 @@ export default function HeroSection() {
                   <div className="box ml-auto">
                     
 
-                    <h3 className='font-semibold uppercase text-[16px] mb-3'>Offical AI Partners</h3>
-                    <ul className='flex gap-3'>
-                        <li><img className='h-7 filter invert' src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/OpenAI_wordmark_2017.svg/3840px-OpenAI_wordmark_2017.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="" /></li>
-                        <li><img className='h-4 filter invert mt-1.5' src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/3840px-Anthropic_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="" /></li>
+                    <h3 className='font-semibold uppercase text-[20px] mb-2'>Official AI Partners</h3>
+                    <ul className='flex gap-4'>
+                        <li><img className='h-11 filter invert mt-2' src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/OpenAI_wordmark_2017.svg/3840px-OpenAI_wordmark_2017.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="" /></li>
+                         <li className='text-[38px]'>|</li>
+                        <li><img className='h-6 filter invert mt-4' src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/3840px-Anthropic_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="" /></li>
                     </ul>
                 </div>
 

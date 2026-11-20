@@ -4,6 +4,7 @@ import "./globals.css"
 import Header from "@/components/layouts/Header"
 import Footer from "@/components/layouts/Footer"
 import LenisProvider from "@/providers/LenisProvider"
+import ScrollProgress from "@/components/ScrollProgress"
 
 export const metadata: Metadata = {
   title: "REACHMEST Technologies",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body suppressHydrationWarning className="min-h-full flex flex-col"> <Header />
         <LenisProvider>
         {children}
+        <ScrollProgress />
         </LenisProvider>
         <Footer />
       </body>
