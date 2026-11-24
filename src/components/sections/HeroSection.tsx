@@ -19,10 +19,10 @@ export default function HeroSection() {
           <div className="absolute z-20 inset-0 flex items-center px-6 md:px-10 lg:px-16">
             {/* ── Left ── */}
             <div className="flex-1 max-w-[560px] space-y-5 mt-16">
-              <div className="inline-flex items-center gap-2 bg-blue-600/15 border border-blue-500/30 text-blue-400 text-[12px] font-medium px-3.5 py-1.5 rounded-full w-fit">
+              {/* <div className="inline-flex items-center gap-2 bg-blue-600/15 border border-blue-500/30 text-blue-400 text-[12px] font-medium px-3.5 py-1.5 rounded-full w-fit">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                 AI-Powered Marketing &amp; Software Agency
-              </div>
+              </div> */}
 
               <h1 className="text-[32px] sm:text-[42px] lg:text-[46px] xl:text-[54px] font-bold leading-[1.15] tracking-tight text-white">
                 Your{" "}
@@ -248,12 +248,9 @@ export default function HeroSection() {
                 </p>
               </li>
               <li className="flex-1 px-10">
-                <a
-                  href="#"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-[14px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200"
-                >
+                <h2 className="text-white text-[34px] font-bold">
                   Free Consultation
-                </a>
+                </h2>
                 <p className="text-gray-400 text-[14px] mt-2">
                   Flexible Engagement Model
                 </p>
@@ -271,7 +268,7 @@ export default function HeroSection() {
                 /// Who We Are
               </span>
 
-              <h2 className="text-[28px] sm:text-[42px] lg:text-[46px] xl:text-[54px] font-bold leading-[1.15] tracking-tight text-white">
+              <h2 className="text-[28px] sm:text-[42px] lg:text-[46px] xl:text-[54px] font-bold leading-[1.15] tracking-tight text-white mb-10">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   Reachmest:
                 </span>
@@ -296,46 +293,316 @@ export default function HeroSection() {
               </p>
 
               <ul className="divide-y divide-gray-800">
-                <li className="py-5 flex items-center gap-8">
+                <li className="py-5 flex items-center gap-60">
                   <span className="text-white text-[52px] font-bold w-32">
                     55+
                   </span>
-                  <span className="text-gray-300 text-[16px]">
+                  <span className="text-gray-300 font-bold text-[20px]">
                     Marketing Experts
                   </span>
                 </li>
-                <li className="py-5 flex items-center gap-8">
+                <li className="py-5 flex items-center gap-60">
                   <span className="text-white text-[52px] font-bold w-32">
                     52+
                   </span>
-                  <span className="text-gray-300 text-[16px]">
+                  <span className="text-gray-300 font-bold text-[20px]">
                     Vetted Developers
                   </span>
                 </li>
-                <li className="py-5 flex items-center gap-8">
+                <li className="py-5 flex items-center gap-60">
                   <span className="text-white text-[52px] font-bold w-32">
                     75+
                   </span>
-                  <span className="text-gray-300 text-[16px]">
+                  <span className="text-gray-300 font-bold text-[20px]">
                     Global Clients
                   </span>
                 </li>
-                <li className="py-5 flex items-center gap-8">
+                <li className="py-5 flex items-center gap-60">
                   <span className="text-white text-[52px] font-bold w-32">
                     10+
                   </span>
-                  <span className="text-gray-300 text-[16px]">Countries</span>
+                  <span className="text-gray-300 font-bold text-[20px]">
+                    Countries
+                  </span>
                 </li>
               </ul>
             </div>
 
             {/* Right - visual */}
             <div className="flex-1 flex justify-center items-center">
-              <img
-                src="/stats-visual.png"
-                alt="Reachmest Visual"
-                className="w-full max-w-[500px]"
-              />
+              <svg
+                viewBox="0 0 480 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full max-w-[480px]"
+              >
+                {/* Background glow */}
+                <ellipse
+                  cx="240"
+                  cy="180"
+                  rx="200"
+                  ry="150"
+                  fill="rgba(59,130,246,0.04)"
+                />
+
+                {/* Grid lines */}
+                {[60, 120, 180, 240, 300].map((y) => (
+                  <line
+                    key={y}
+                    x1="60"
+                    y1={y}
+                    x2="440"
+                    y2={y}
+                    stroke="rgba(255,255,255,0.05)"
+                    strokeWidth="1"
+                  />
+                ))}
+                {[60, 160, 260, 360, 440].map((x) => (
+                  <line
+                    key={x}
+                    x1={x}
+                    y1="40"
+                    x2={x}
+                    y2="300"
+                    stroke="rgba(255,255,255,0.05)"
+                    strokeWidth="1"
+                  />
+                ))}
+
+                {/* Area fill under curve */}
+                <path
+                  d="M60 260 C110 240, 160 220, 210 190 C260 160, 310 120, 360 90 C390 72, 420 65, 440 60 L440 300 L60 300 Z"
+                  fill="url(#areaGrad)"
+                  opacity="0.35"
+                />
+
+                {/* Main growth curve */}
+                <path
+                  d="M60 260 C110 240, 160 220, 210 190 C260 160, 310 120, 360 90 C390 72, 420 65, 440 60"
+                  stroke="url(#lineGrad)"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+
+                {/* Secondary dashed curve */}
+                <path
+                  d="M60 280 C120 265, 180 250, 240 230 C300 210, 360 180, 440 155"
+                  stroke="rgba(99,179,237,0.4)"
+                  strokeWidth="1.5"
+                  strokeDasharray="6 4"
+                  strokeLinecap="round"
+                />
+
+                {/* Data points */}
+                {[
+                  { cx: 60, cy: 260 },
+                  { cx: 160, cy: 220 },
+                  { cx: 260, cy: 160 },
+                  { cx: 360, cy: 90 },
+                  { cx: 440, cy: 60 },
+                ].map(({ cx, cy }, i) => (
+                  <g key={i}>
+                    <circle
+                      cx={cx}
+                      cy={cy}
+                      r="6"
+                      fill="#0f172a"
+                      stroke="rgba(96,165,250,0.9)"
+                      strokeWidth="2"
+                    />
+                    <circle cx={cx} cy={cy} r="3" fill="rgba(96,165,250,0.9)" />
+                  </g>
+                ))}
+
+                {/* Stat callout cards */}
+                {/* Card: 55+ */}
+                <g>
+                  <rect
+                    x="60"
+                    y="20"
+                    width="90"
+                    height="38"
+                    rx="8"
+                    fill="rgba(15,30,60,0.85)"
+                    stroke="rgba(59,130,246,0.3)"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="80"
+                    y="37"
+                    fill="rgba(96,165,250,1)"
+                    fontSize="13"
+                    fontWeight="700"
+                  >
+                    55+
+                  </text>
+                  <text x="100" y="37" fill="rgba(156,163,175,1)" fontSize="10">
+                    Experts
+                  </text>
+                  <text x="80" y="50" fill="rgba(156,163,175,0.7)" fontSize="9">
+                    Marketing
+                  </text>
+                </g>
+
+                {/* Card: 75+ */}
+                <g>
+                  <rect
+                    x="295"
+                    y="58"
+                    width="90"
+                    height="38"
+                    rx="8"
+                    fill="rgba(15,30,60,0.85)"
+                    stroke="rgba(59,130,246,0.3)"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="315"
+                    y="75"
+                    fill="rgba(34,211,238,1)"
+                    fontSize="13"
+                    fontWeight="700"
+                  >
+                    75+
+                  </text>
+                  <text x="335" y="75" fill="rgba(156,163,175,1)" fontSize="10">
+                    Clients
+                  </text>
+                  <text
+                    x="315"
+                    y="88"
+                    fill="rgba(156,163,175,0.7)"
+                    fontSize="9"
+                  >
+                    Global
+                  </text>
+                </g>
+
+                {/* Card: 52+ */}
+                <g>
+                  <rect
+                    x="175"
+                    y="148"
+                    width="90"
+                    height="38"
+                    rx="8"
+                    fill="rgba(15,30,60,0.85)"
+                    stroke="rgba(59,130,246,0.3)"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="195"
+                    y="165"
+                    fill="rgba(96,165,250,1)"
+                    fontSize="13"
+                    fontWeight="700"
+                  >
+                    52+
+                  </text>
+                  <text
+                    x="215"
+                    y="165"
+                    fill="rgba(156,163,175,1)"
+                    fontSize="10"
+                  >
+                    Devs
+                  </text>
+                  <text
+                    x="195"
+                    y="178"
+                    fill="rgba(156,163,175,0.7)"
+                    fontSize="9"
+                  >
+                    Vetted
+                  </text>
+                </g>
+
+                {/* Y axis label */}
+                <text
+                  x="30"
+                  y="260"
+                  fill="rgba(107,114,128,0.8)"
+                  fontSize="10"
+                  textAnchor="middle"
+                >
+                  Low
+                </text>
+                <text
+                  x="30"
+                  y="80"
+                  fill="rgba(107,114,128,0.8)"
+                  fontSize="10"
+                  textAnchor="middle"
+                >
+                  High
+                </text>
+
+                {/* X axis label */}
+                <text
+                  x="60"
+                  y="318"
+                  fill="rgba(107,114,128,0.8)"
+                  fontSize="10"
+                  textAnchor="middle"
+                >
+                  Y1
+                </text>
+                <text
+                  x="260"
+                  y="318"
+                  fill="rgba(107,114,128,0.8)"
+                  fontSize="10"
+                  textAnchor="middle"
+                >
+                  Y3
+                </text>
+                <text
+                  x="440"
+                  y="318"
+                  fill="rgba(107,114,128,0.8)"
+                  fontSize="10"
+                  textAnchor="middle"
+                >
+                  Y5
+                </text>
+
+                {/* Legend */}
+                <circle cx="130" cy="338" r="4" fill="rgba(96,165,250,0.9)" />
+                <text
+                  x="140"
+                  y="342"
+                  fill="rgba(156,163,175,0.8)"
+                  fontSize="10"
+                >
+                  Growth Trajectory
+                </text>
+                <circle cx="260" cy="338" r="4" fill="rgba(99,179,237,0.5)" />
+                <text
+                  x="270"
+                  y="342"
+                  fill="rgba(156,163,175,0.8)"
+                  fontSize="10"
+                >
+                  Industry Average
+                </text>
+
+                <defs>
+                  <linearGradient
+                    id="lineGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stopColor="rgba(96,165,250,0.6)" />
+                    <stop offset="100%" stopColor="rgba(34,211,238,1)" />
+                  </linearGradient>
+                  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="rgba(59,130,246,0.4)" />
+                    <stop offset="100%" stopColor="rgba(59,130,246,0)" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
           </div>
         </section>
