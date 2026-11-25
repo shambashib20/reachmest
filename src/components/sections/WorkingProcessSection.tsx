@@ -1,82 +1,107 @@
-'use client'
+"use client";
 
-import { Search, BarChart2, Map, Zap, Activity, TrendingUp } from 'lucide-react'
+import {
+  Search,
+  BarChart2,
+  Map,
+  Zap,
+  Activity,
+  TrendingUp,
+} from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Discover & Understand",
-    description: "We learn about your business, audience, services, competitors and growth priorities.",
+    title: "SEO for Better Search Visibility",
+    description:
+      "Optimize your site to increase organic visibility and improve performance and relevance in search.",
     icon: Search,
   },
   {
     number: "02",
-    title: "Research & Analyze",
-    description: "We evaluate market opportunities, search demand, competitor activity and existing digital performance.",
+    title: "AI-Powered Marketing",
+    description:
+      "Use AI for research, content creation and marketing to enhance productivity and focus.",
     icon: BarChart2,
   },
   {
     number: "03",
-    title: "Plan & Strategize",
-    description: "We develop a customized roadmap with clear priorities, channel recommendations and measurable objectives.",
+    title: "Sales-Driven Advertising",
+    description:
+      "Maximize Google, Meta and Bing Ads, PPC and digital advertising to achieve your business goals.",
     icon: Map,
   },
   {
     number: "04",
-    title: "Execute & Implement",
-    description: "Our team works across SEO, paid advertising, social media, content and development according to the agreed strategy.",
+    title: "Social Media Growth",
+    description:
+      "Get your brand in front of more potential customers across all major social media channels",
     icon: Zap,
   },
   {
     number: "05",
-    title: "Monitor & Optimize",
-    description: "We review campaign performance, identify improvement opportunities and refine activities using relevant data.",
+    title: "Content & Brand Strategy",
+    description:
+      "Position your brand where it matters with audience-centric content that supports the customer journey. ",
     icon: Activity,
   },
   {
     number: "06",
-    title: "Report & Grow",
-    description: "We share progress, discuss insights and plan the next steps for continuous improvement.",
+    title: "Custom Software Development",
+    description:
+      "Create custom software and automation for your business processes to increase efficiency and effectiveness",
     icon: TrendingUp,
   },
-]
+  {
+    number: "07",
+    title: "AI Automation Solutions",
+    description:
+      "We develop digital solutions to assist your business with workflow and task automation.",
+    icon: TrendingUp,
+  },
+  {
+    number: "08",
+    title: "Custom Software Integration",
+    description:
+      "We integrate software to improve data transfer and simplify processes, and provide a seamless environment for employees to work. ",
+    icon: TrendingUp,
+  },
+];
 
 export default function WorkingProcessSection() {
   return (
     <section className="bg-[#0a0a0a] py-24 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-20">
           <span className="inline-block text-blue-500 text-xs font-bold uppercase tracking-[0.2em] mb-4">
-            Our Process
+            Expertise & Capablities
           </span>
           <h2 className="text-white text-4xl md:text-[48px] font-bold leading-tight">
-            Our <span className="text-blue-500">Proven</span> Approach &{' '}
-            <span className="text-blue-500">Working</span> Process
+            Our <span className="text-blue-500">Expertise</span> & Core{" "}
+            <span className="text-blue-500">Capablities</span>
           </h2>
           <p className="text-zinc-400 mt-5 max-w-2xl mx-auto text-[16px] leading-7">
-            Every successful campaign begins with understanding your business. Our structured
-            process connects marketing activities and development projects with your objectives.
+            With marketing know-how, technical chops and creative execution, we
+            help our clients compete in the digital world.
           </p>
         </div>
 
         {/* Steps — Staggered Timeline */}
         <div className="relative">
-
           {/* Center vertical line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-zinc-700 to-transparent hidden md:block" />
 
           <div className="flex flex-col gap-10">
             {steps.map((step, i) => {
-              const Icon = step.icon
-              const isLeft = i % 2 === 0
+              const Icon = step.icon;
+              const isLeft = i % 2 === 0;
 
               return (
                 <div
                   key={step.number}
                   className={`relative flex items-center ${
-                    isLeft ? 'md:justify-start' : 'md:justify-end'
+                    isLeft ? "md:justify-start" : "md:justify-end"
                   } justify-center`}
                 >
                   {/* Timeline dot */}
@@ -91,7 +116,7 @@ export default function WorkingProcessSection() {
                       hover:border-blue-500/40
                       hover:bg-zinc-900
                       transition-all duration-300
-                      ${isLeft ? 'md:mr-[54%]' : 'md:ml-[54%]'}
+                      ${isLeft ? "md:mr-[54%]" : "md:ml-[54%]"}
                     `}
                   >
                     {/* Top row: number + icon */}
@@ -100,12 +125,15 @@ export default function WorkingProcessSection() {
                         {step.number}
                       </span>
                       <div className="w-11 h-11 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors duration-300">
-                        <Icon className="w-5 h-5 text-blue-400" strokeWidth={1.5} />
+                        <Icon
+                          className="w-5 h-5 text-blue-400"
+                          strokeWidth={1.5}
+                        />
                       </div>
                     </div>
 
                     {/* Text */}
-                    <h3 className="text-white text-[20px] font-bold mb-2 leading-snug">
+                    <h3 className="text-white-500 text-[20px] font-bold mb-2 leading-snug">
                       {step.title}
                     </h3>
                     <p className="text-zinc-400 text-[15px] leading-7">
@@ -113,12 +141,11 @@ export default function WorkingProcessSection() {
                     </p>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
